@@ -69,11 +69,7 @@ class Tragamonedas:
             resultado.append(self.simbolos[indice])
 
         # Mostrar los símbolos obtenidos.
-        #print(f"[ {resultado[0]}  {resultado[1]}  {resultado[2]} ]")
-        print("\n🎰 RESULTADO DE LA JUGADA")
-        print("-" * 30)
-        print(" | ".join(resultado))
-        print("-" * 30)
+        print(f"[ {resultado[0]}  {resultado[1]}  {resultado[2]} ]")
 
         return resultado
 
