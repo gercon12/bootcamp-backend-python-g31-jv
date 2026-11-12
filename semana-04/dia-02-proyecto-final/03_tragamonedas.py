@@ -15,7 +15,7 @@ class Tragamonedas:
 
         self.nombre = nombre
 
-        # Atributo privado: no se debe modificar directamente.
+        # Atributo privado, encapsulamiento: no se debe modificar directamente.
         self.__creditos = creditos
 
         # Estadísticas de la máquina.
@@ -206,7 +206,7 @@ class Mundial2026Tragamonedas(Tragamonedas):
         super().__init__(
             nombre,
             creditos,
-            ["⚽", "🏆", "🥅", "👟", "🇲🇽", "🇺🇸", "🇨🇦"]
+             ["⚽", "🏆", "🥅", "👟", "🏟️", "🎽"]
         )
 
     # Sobrescribir jugar() con reglas diferentes.
