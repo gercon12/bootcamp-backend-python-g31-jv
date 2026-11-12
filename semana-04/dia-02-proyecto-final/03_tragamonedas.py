@@ -165,7 +165,6 @@ class Tragamonedas:
 # ============================================================
 # PARTE 2: MÁQUINA DE FRUTAS
 
-
 class TragamonedasFrutas(Tragamonedas):
 
     def __init__(self, nombre, creditos):
@@ -181,7 +180,6 @@ class TragamonedasFrutas(Tragamonedas):
 # ============================================================
 # PARTE 3: MÁQUINA CLÁSICA
 
-
 class TragamonedasClasico(Tragamonedas):
 
     def __init__(self, nombre, creditos):
@@ -196,7 +194,6 @@ class TragamonedasClasico(Tragamonedas):
 
 # ============================================================
 # PARTE 4: MÁQUINA - MUNDIAL 2026
-
 
 class Mundial2026Tragamonedas(Tragamonedas):
 
@@ -219,7 +216,6 @@ class Mundial2026Tragamonedas(Tragamonedas):
 
 # ============================================================
 # PARTE 5: BUCLE DE JUEGO DE CADA MÁQUINA
-
 
 def jugar_maquina(maquina):
 
@@ -259,7 +255,6 @@ def jugar_maquina(maquina):
 # ============================================================
 # PARTE 6: MENÚ PRINCIPAL DEL CASINO
 
-
 def mostrar_menu(maquinas):
 
     print("\n" + "=" * 45)
@@ -285,7 +280,6 @@ def mostrar_menu(maquinas):
 
 # ============================================================
 # PARTE 7: ESTADÍSTICAS GENERALES
-
 
 def mostrar_estadisticas_todas(maquinas):
 
@@ -327,7 +321,6 @@ def mostrar_estadisticas_todas(maquinas):
 
 # ============================================================
 # PARTE 8: PROGRAMA PRINCIPAL
-
 
 def main():
 
