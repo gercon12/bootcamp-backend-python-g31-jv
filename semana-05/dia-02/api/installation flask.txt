@@ -1,0 +1,16 @@
+# Installation SQLAlchemy
+https://flask-sqlalchemy.readthedocs.io/en/stable/
+
+python -m venv venv
+
+source venv/scripts/activate
+
+pip install flask
+
+pip freeze > requirements.txt
+
+pip install psycopg2
+
+pip freeze > requirements.txt
+
+pip install -U Flask-SQLAlchemy
