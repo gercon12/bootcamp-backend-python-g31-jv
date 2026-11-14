@@ -11,6 +11,17 @@ pip freeze > requirements.txt
 
 pip install psycopg2
 
+
+
 pip freeze > requirements.txt
 
 pip install -U Flask-SQLAlchemy
+
+pip install psycopg2-binary
+
+
+pip uninstall psycopg2
+
+pip freeze > requirements.txt
+
+pip install "psycopg[binary]" 
