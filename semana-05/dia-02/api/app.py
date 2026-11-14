@@ -4,16 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 
-
-
-
 # configure the SQLite database, relative to the app instance folder
 # Conexion con nuestra BD
 # Configuracion de las credenciales de la BD
 # DIALECT://USERNAME:PASSWORD@HOST:PORT/DATABASE
 # Ejemplo: postgresql://postgres:admin@localhost:5432/mi_bd
 # postgresql://postgres:root@localhost:5433/canciones
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5432/canciones"
+#app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5433/canciones"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:root@localhost:5433/canciones"
 
 # Integrar SQLAlchemy cen todo mi servidor
 db = SQLAlchemy(app)
@@ -207,3 +205,5 @@ def delete_artista(id):
     return{
         "msg": "Artista eliminado exitosamente"
     }, 200
+
+app.run(debug=True)

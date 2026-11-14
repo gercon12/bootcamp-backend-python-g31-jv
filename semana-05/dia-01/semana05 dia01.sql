@@ -87,3 +87,20 @@ INSERT INTO canciones (titulo, album, duracion_segundos, anio_lanzamiento, artis
     -- Kiss (id=10)
     ('Rock and Roll All Nite', 'Dressed to Kill', 195, 1975, 10),
     ('I Was Made for Lovin You', 'Dynasty', 240, 1979, 10);
+
+SELECT * FROM canciones;
+SELECT * FROM artistas;
+
+SELECT COUNT(*) CANTIDAD,  genero FROM artistas
+GROUP BY genero;
+
+SELECT a.nombre, a.genero, c.titulo, c.album 
+FROM artistas a
+INNER JOIN  canciones c ON a.id = c.artista_id
+where c.artista_id = 1;
+
+	-- 2. Canciones de Grupo 5
+SELECT c.titulo, c.album, c.anio_lanzamiento
+FROM canciones c
+INNER JOIN artistas a ON c.artista_id = a.id
+WHERE a.nombre = 'Grupo 5';
