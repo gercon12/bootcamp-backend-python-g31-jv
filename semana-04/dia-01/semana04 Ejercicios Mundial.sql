@@ -219,7 +219,19 @@ g.es_penal,
 g.partido_id
 FROM goles as g
 INNER JOIN jugadores AS j ON j.id = g.jugador_id
+ORDER BY g.partido_id, g.minuto;
 
 
-
+-- Ejercicio 38: Mostrar todos los goles con el nombre del jugador y el nombre de su equipo. 
+-- JOIN goles → jugadores → equipos.
+-- jugador, equipo, minuto, es_penal
+SELECT
+j.nombre AS jugador,
+e.nombre AS equipo,
+g.minuto,
+g.es_penal
+FROM goles as g
+INNER JOIN jugadores AS j ON j.id = g.jugador_id
+INNER JOIN equipos AS e ON e.id = j.equipo_id
+ORDER BY g.partido_id, g.minuto;
 
