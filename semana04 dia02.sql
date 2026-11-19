@@ -331,3 +331,5 @@ SELECT grupo,
 FROM equipos
 GROUP BY grupo
 ORDER BY grupo;
+
+SELECT current_database();  --mundial_futbol

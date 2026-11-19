@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Ejemplo: postgresql://postgres:admin@localhost:5432/mi_bd
 # postgresql://postgres:root@localhost:5433/canciones
 #app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5433/canciones"
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:root@localhost:5433/canciones"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5432/canciones"
 
 # Integrar SQLAlchemy cen todo mi servidor
 db = SQLAlchemy(app)
