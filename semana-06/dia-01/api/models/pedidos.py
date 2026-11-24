@@ -1,18 +1,25 @@
 from db import db
-from sqlalchemy import Integer, DateTime, float
 from sqlalchemy.orm import Mapped, mapped_column
-
+from sqlalchemy import Integer, DateTime, Float, ForeignKey
+from datetime import datetime
 
 class PedidosModel(db.Model):
-    id_pedido: Mapped[int] = mapped_column(Integer, primary_key=True)
-    id_cliente: Mapped[int] = mapped_column(Integer, nullable=False)
-    id_plato: Mapped[int] = mapped_column(Integer, nullable=False)
-    cantidad: Mapped[int] = mapped_column(Integer, nullable=False)
-    fecha: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
-    total: Mapped[float] = mapped_column(float, nullable=False)
+   id_pedido:Mapped[int]=mapped_column(Integer, primary_key=True)
+   cantidad:Mapped[int]=mapped_column(Integer, nullable=False)
+   fecha:Mapped[str]=mapped_column(DateTime, default=datetime.now)
+   total:Mapped[float]=mapped_column(Float, nullable=False)
 
-    id_cliente: Mapped[int] = mapped_column(Integer, db.ForeignKey("clientes.id_cliente"), nullable=False)
-    id_plato: Mapped[int] = mapped_column(Integer, db.ForeignKey("platos.id_plato"), nullable=False)
-    
+   # LLaves foraneas
+   id_cliente:Mapped[int]=mapped_column(Integer, ForeignKey("clientes.id_cliente"))
+   id_plato:Mapped[int]=mapped_column(Integer, ForeignKey("platos.id_plato"))
 
-    __tablename__ = "pedidos"
+   __tablename__ = "pedidos"
+
+   def to_dic(self):
+      return {
+         "id_pedido": self.id_pedido,
+         "cantidad": self.cantidad,
+         "total": self.total,
+         "id_cliente": self.id_cliente,
+         "id_plato": self.id_plato
+      }

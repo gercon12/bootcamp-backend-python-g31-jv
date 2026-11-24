@@ -1,0 +1,35 @@
+python -m venv venv
+
+source  venv/Scripts/activate
+
+pip install flask
+
+pip freeze > requirements.txt
+
+pip install -U Flask-SQLAlchemy
+
+pip freeze > requirements.txt
+
+pip install Flask-Migrate
+
+pip freeze > requirements.txt
+
+# Historial de cambios
+flask db init
+
+# Comentario de tu migración
+flask db migrate -m "Initial migration."
+
+# Ejecución de la migración
+flask db upgrade
+
+---------------------------------
+Name: SQLite Viewer
+Id: qwtel.sqlite-viewer
+Description: SQLite Viewer for VS Code
+Version: 26.9.1
+Publisher: Florian Klampfer
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer
+---------------------------------
+
+
