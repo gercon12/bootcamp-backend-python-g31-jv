@@ -32,4 +32,7 @@ Publisher: Florian Klampfer
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer
 ---------------------------------
 
+pip install flask-restful
+
+
 
