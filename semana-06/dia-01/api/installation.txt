@@ -34,5 +34,9 @@ VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=qwtel.s
 
 pip install flask-restful
 
+gerencia@vosmedia.com
+
+fl@ask@lqu3mY
+
 
 

@@ -13,7 +13,7 @@ from db import db
 class PlatosAddList(Resource):
    def get(self):
       platos = PlatosModel.query.all()
-      # [PlatosModel1, PlatosModel2]
+      # formato como vienen los datos: [PlatosModel1, PlatosModel2]
       resultado_formateado = []
       for elmt in platos:
          formato = {
